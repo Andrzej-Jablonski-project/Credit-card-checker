@@ -1,0 +1,29 @@
+{
+  "name": "szyfr-cezara",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel serve ./src/index.html",
+    "build": "parcel build ./src/index.html"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^7.23.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-react": "^7.23.1",
+    "husky": "^4.3.8",
+    "lint-staged": "^10.5.4",
+    "parcel": "^2.0.0-beta.2",
+    "prettier": "2.2.1",
+    "pretty-quick": "^3.1.0",
+    "sass": "^1.32.5"
+  },
+  "browserslist": "> 0.2%",
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
+}
