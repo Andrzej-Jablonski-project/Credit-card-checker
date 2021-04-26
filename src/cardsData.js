@@ -2,7 +2,7 @@ const cards = {
     mastercard:{ 
         name: 'Mastercard',
         numbersLength: [16],
-        prefix: ['51','52','53','54','55'],
+        prefix: ['22','51','52','53','54','55'],
     },
     visa:{ 
         name: 'Visa',
