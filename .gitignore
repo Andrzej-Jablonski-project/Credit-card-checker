@@ -1,7 +1,6 @@
 
 .cache/
 coverage/
-dist/*
 .parcel-cache/
 #!dist/index.html
 node_modules/
