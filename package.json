@@ -11,6 +11,14 @@
         "format": "npx prettier --write .",
         "lint": "eslint ."
     },
+    "husky": {
+        "hooks": {
+            "pre-commit": "pretty-quick --staged && lint-staged"
+        }
+    },
+    "lint-staged": {
+        "*.js": "eslint"
+    },
     "author": "",
     "license": "ISC",
     "devDependencies": {
