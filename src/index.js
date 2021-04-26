@@ -14,14 +14,15 @@ function checkCardnumber(cardNumber){
     return isCardNumberValid(cardNumber) ? getCardProvider(cardNumber) : 'Incorrect number';
 }
 
+document.addEventListener('DOMContentLoaded', () => {
 
-const result = checkCardnumber(4532387988988077);
-const result2 = checkCardnumber(5193080150954111);
-const result3 = checkCardnumber(370144091492882);
-const result4 = checkCardnumber(370145091492882);
-const result5 = checkCardnumber('370-144091 492882');
-console.log(result);
-console.log(result2);
-console.log(result3);
-console.log(result4);
-console.log(result5);
+    const inputData = document.querySelector('.card-checker__input--js');
+    const info = document.querySelector(".card-checker__info-bar__content--js");
+    const btn = document.querySelector(".card-checker__button--js");
+
+    btn.addEventListener('click', showCheckCard);
+
+    function showCheckCard(){
+        info.textContent = `Your card is: ${checkCardnumber(inputData.value)}`;
+    }
+})
