@@ -1,4 +1,4 @@
-import { cards } from './cardsData';
+const { cards } = require('./cardsData');
 
 const allNumbersCardsLength = [];
 
@@ -15,7 +15,7 @@ function checkCardNumbersLength(cardNumber){
 }
 
 
-function getCardProvider(cardNumber){
+module.exports.getCardProvider = (cardNumber) => {
     let isProvider = 'Cannot recognize card provider';
 
     for (const value of Object.values(cards)){
@@ -32,5 +32,3 @@ function getCardProvider(cardNumber){
     }
     return checkCardNumbersLength(cardNumber) ? isProvider : 'Cannot recognize card provider';
 }
-
-export { getCardProvider };

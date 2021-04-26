@@ -1,4 +1,4 @@
-const cards = {
+module.exports.cards = {
     mastercard:{ 
         name: 'Mastercard',
         numbersLength: [16],
@@ -15,5 +15,3 @@ const cards = {
         prefix: ['34','37'],
     },
 }
-
-export { cards };

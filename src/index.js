@@ -1,14 +1,14 @@
-import { isCardNumberValid } from './isCardNumberValid';
-import { getCardProvider } from './getCardProvider';
+const { isCardNumberValid } = require('./isCardNumberValid');
+const { getCardProvider } = require('./getCardProvider')
 
-function checkCardnumber(cardNumber){
+module.exports.checkCardnumber = (cardNumber) => {
     
     if(typeof cardNumber === 'string'){
         cardNumber = parseInt([...cardNumber]
             .filter((el) => (el !== ' ') & (el !== '-'))
             .join(''));
     } else if (typeof cardNumber !== 'number') {
-        throw new Error('Incorrect number');
+        throw new Error('The data type is invalid');
     } 
 
     return isCardNumberValid(cardNumber) ? getCardProvider(cardNumber) : 'Incorrect number';

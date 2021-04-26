@@ -1,4 +1,4 @@
-function isCardNumberValid(cardNumber){
+module.exports.isCardNumberValid = (cardNumber) => {
     const numberReverse = arrayOfDigits(cardNumber).reverse();
     const result = calculateEvenIndex(numberReverse) + calculateOddIndex(numberReverse);
     return result % 10 === 0;
@@ -24,5 +24,3 @@ function calculateOddIndex(digits){
 function sumOfDigits(digits){
     return digits.reduce((curr, next) => curr + next, 0);
 }
-
-export { isCardNumberValid };
