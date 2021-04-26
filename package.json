@@ -6,7 +6,7 @@
     "scripts": {
         "clean": "rm dist/*.*",
         "start": "parcel serve ./src/index.html",
-        "build": "parcel build ./src/index.html",
+        "build": "parcel build",
         "test": "jest --watch",
         "format": "npx prettier --write .",
         "lint": "eslint ."
