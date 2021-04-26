@@ -1,18 +1,5 @@
-const { isCardNumberValid } = require('./isCardNumberValid');
-const { getCardProvider } = require('./getCardProvider')
-
-module.exports.checkCardnumber = (cardNumber) => {
-    
-    if(typeof cardNumber === 'string'){
-        cardNumber = parseInt([...cardNumber]
-            .filter((el) => (el !== ' ') & (el !== '-'))
-            .join(''));
-    } else if (typeof cardNumber !== 'number') {
-        throw new Error('The data type is invalid');
-    } 
-
-    return isCardNumberValid(cardNumber) ? getCardProvider(cardNumber) : 'Incorrect number';
-}
+// eslint-disable-next-line no-undef
+const { checkCardNumber } = require('./checkCardNumber');
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -22,7 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     btn.addEventListener('click', showCheckCard);
 
-    function showCheckCard(){
-        info.textContent = `Your card is: ${checkCardnumber(inputData.value)}`;
+    function showCheckCard(event){
+        event.preventDefault();
+        info.textContent = `Your card is: ${checkCardNumber(inputData.value)}`;
     }
 })

@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-undef
 const { cards } = require('./cardsData');
 
 const allNumbersCardsLength = [];
@@ -15,6 +16,7 @@ function checkCardNumbersLength(cardNumber){
 }
 
 
+// eslint-disable-next-line no-undef
 module.exports.getCardProvider = (cardNumber) => {
     let isProvider = 'Cannot recognize card provider';
 
