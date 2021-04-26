@@ -1,39 +1,39 @@
 /* eslint-disable no-undef */
-const { checkCardNumber } = require('../index');
+const { checkCardNumber } = require("../index");
 
-test('should be Mastercard', () => {
-    const cardNumber = '5555555555554444';
+test("should be Mastercard", () => {
+    const cardNumber = "5555555555554444";
     const result = checkCardNumber(cardNumber);
-    expect(result).toBe('Mastercard');
+    expect(result).toBe("Mastercard");
 });
 
-test('should be Visa', () => {
-    const cardNumber = '4111111111111111';
+test("should be Visa", () => {
+    const cardNumber = "4111111111111111";
     const result = checkCardNumber(cardNumber);
-    expect(result).toBe('Visa');
+    expect(result).toBe("Visa");
 });
 
-test('should be American Express', () => {
-    const cardNumber = '371449635398431';
+test("should be American Express", () => {
+    const cardNumber = "371449635398431";
     const result = checkCardNumber(cardNumber);
-    expect(result).toBe('American Express');
+    expect(result).toBe("American Express");
 });
 
-test('cannot recognize the card provider', () => {
-    const cardNumber = '6011111111111117';
+test("cannot recognize the card provider", () => {
+    const cardNumber = "6011111111111117";
     const result = checkCardNumber(cardNumber);
-    expect(result).toBe('Cannot recognize card provider');
+    expect(result).toBe("Cannot recognize card provider");
 });
 
-test('should be the wrong card number', () => {
-    const cardNumber = '3530121333300000';
+test("should be the wrong card number", () => {
+    const cardNumber = "3530121333300000";
     const result = checkCardNumber(cardNumber);
-    expect(result).toBe('Incorrect number');
+    expect(result).toBe("Incorrect number");
 });
 
-test('should throw if the data type is invalid', () => {
+test("should throw if the data type is invalid", () => {
     const cardNumber = [3530121333300000];
     expect(() => {
         checkCardNumber(cardNumber);
-    }).toThrow('The data type is invalid');
+    }).toThrow("The data type is invalid");
 });
