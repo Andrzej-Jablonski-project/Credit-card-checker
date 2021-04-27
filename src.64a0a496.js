@@ -9,4 +9,4 @@ function r(r){return o(r)||n(r)||t(r)||e()}function e(){throw new TypeError("Inv
 },{"./isCardNumberValid":"oxN0","./getCardProvider":"H1L3"}],"Focm":[function(require,module,exports) {
 var e=require("./checkCardNumber"),c=e.checkCardNumber;document.addEventListener("DOMContentLoaded",function(){var e=document.querySelector(".card-checker__input--js"),t=document.querySelector(".card-checker__info-bar__content--js");document.querySelector(".card-checker__button--js").addEventListener("click",function(n){n.preventDefault(),t.textContent="Your card is: ".concat(c(e.value))}),e.addEventListener("click",function(){e.value=""})});
 },{"./checkCardNumber":"DzcQ"}]},{},["Focm"], null)
-//# sourceMappingURL=/src.64a0a496.js.map
+//# sourceMappingURL=src.64a0a496.js.map
