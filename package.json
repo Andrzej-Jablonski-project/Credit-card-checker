@@ -4,7 +4,7 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "clean": "rm dist/*.*",
+        "clean": "rm dist/*.* && rm docs/*.* ",
         "start": "parcel serve ./src/index.html",
         "build": "parcel build ./src/index.html --out-dir docs --public-url ./",
         "test": "jest --watch",

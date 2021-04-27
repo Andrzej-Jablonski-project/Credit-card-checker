@@ -20,7 +20,6 @@ He can check your credit card number.
 -   sass
 -   prettier
 -   autoprefixer
--   tailwindcss
 
 ## Automation
 
@@ -50,19 +49,19 @@ npm install
 Development project:
 
 ```bash
-npm start
+npm run start
 ```
 
 Build a project for publication:
 
 ```bash
-npm build
+npm run build
 ```
 
 Clean:
 
 ```bash
-npm clean
+npm run clean
 ```
 
 ## Link to the app
