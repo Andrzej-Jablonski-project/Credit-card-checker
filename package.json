@@ -6,11 +6,11 @@
     "scripts": {
         "clean": "rm dist/*.*",
         "start": "parcel serve ./src/index.html",
-        "build": "parcel build ./src/index.html",
+        "build": "parcel build ./src/index.html --out-dir docs --public-url ./",
         "test": "jest --watch",
         "format": "npx prettier --write .",
         "lint": "eslint .",
-        "deploy": "gh-pages -d dist -b public"
+        "deploy": "gh-pages -d docs -b public"
     },
     "husky": {
         "hooks": {
