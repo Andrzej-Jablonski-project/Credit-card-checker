@@ -1,19 +1,19 @@
 // eslint-disable-next-line no-undef
-const { checkCardNumber } = require('./checkCardNumber');
+const { checkCardNumber } = require("./checkCardNumber");
 
-document.addEventListener('DOMContentLoaded', () => {
-
-    const inputData = document.querySelector('.card-checker__input--js');
+document.addEventListener("DOMContentLoaded", () => {
+    const inputData = document.querySelector(".card-checker__input--js");
     const info = document.querySelector(".card-checker__info-bar__content--js");
     const btn = document.querySelector(".card-checker__button--js");
 
-    btn.addEventListener('click', showCheckCard);
-    inputData.addEventListener('click', () => {
-        inputData.value = '';
+    btn.addEventListener("click", showCheckCard);
+    inputData.addEventListener("click", () => {
+        inputData.value = "";
+        info.textContent = `Your card is: `;
     });
 
-    function showCheckCard(event){
+    function showCheckCard(event) {
         event.preventDefault();
         info.textContent = `Your card is: ${checkCardNumber(inputData.value)}`;
     }
-})
+});
